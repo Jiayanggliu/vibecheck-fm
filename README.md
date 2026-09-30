@@ -55,6 +55,10 @@ These are weak signals. The experience should present the output as entertainmen
 
 Repeated cross-validation supports a **15-clip research default**. It retains most of the 25-clip predictive signal while shortening the experience by 40%. See [the clip-count experiment](docs/clip-count-experiment.md) for the method, results, and selected clips.
 
+### Persona system
+
+Eight deterministic entertainment personas are fitted from out-of-fold model predictions. Their validation shares range from 10.0% to 15.0%, avoiding a result system dominated by one type. See [the persona-system documentation](docs/persona-system.md).
+
 ## Important limitations
 
 - The target is a noisy estimate of broad traits, not a diagnosis.
