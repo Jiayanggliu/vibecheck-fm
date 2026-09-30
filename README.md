@@ -28,6 +28,13 @@ python scripts/train_baseline.py \
   --input "/path/to/nfqb9-osfstorage-archive.zip"
 ```
 
+Compare shorter experiences with repeated cross-validation:
+
+```bash
+python scripts/compare_clip_counts.py \
+  --input "/path/to/nfqb9-osfstorage-archive.zip"
+```
+
 The script uses the largest cohort (`Condition == 3`, Mix A), holds out 20% of users, and writes local metrics and a fitted model under `artifacts/`.
 
 ### Reproduced baseline
@@ -43,6 +50,10 @@ Using random seed 42, the local 80/20 holdout produced these Pearson correlation
 | Neuroticism | 0.102 |
 
 These are weak signals. The experience should present the output as entertainment and avoid claims of psychological assessment.
+
+### MVP clip-count decision
+
+Repeated cross-validation supports a **15-clip research default**. It retains most of the 25-clip predictive signal while shortening the experience by 40%. See [the clip-count experiment](docs/clip-count-experiment.md) for the method, results, and selected clips.
 
 ## Important limitations
 
